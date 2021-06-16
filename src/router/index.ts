@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, Router, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, Router, RouteRecordRaw } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Vuex from '@/views/Vuex.vue'
 import Resource from '@/views/Resource.vue'
@@ -86,8 +86,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router: Router = createRouter({
-  history: createWebHistory(),
-  // history: createWebHashHistory(), // 带#
+  // history: createWebHistory(),
+  history: createWebHashHistory(), // 带#
   routes
 })
 
