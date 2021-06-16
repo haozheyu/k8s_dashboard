@@ -14,6 +14,7 @@ export default defineConfig({
   base: './', // 设置打包路径
   server: {
     port: 4500, // 设置服务启动端口号
+    host: "127.0.0.1",
     open: true, // 设置服务启动时是否自动打开浏览器
     cors: true // 允许跨域
   }
