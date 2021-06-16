@@ -42,3 +42,4 @@ pod 的ssh登录
 
 ![image-20210608204744563](images/README/image-20210608204744563.png)
 
+![image-20210608204744563](images/README/image-20210608204744563.png)
