@@ -39,7 +39,7 @@ export default defineComponent({
     const podNamespace = router.currentRoute.value.query.podNamespace
     const containerName = router.currentRoute.value.query.containerName
     const SHELL = router.currentRoute.value.query.shell
-    const querystring = "ws://127.0.0.1:9997/resource/websocket?" + "podNs="+ podNamespace + "&podName=" + podName + "&containerName=" + containerName + "&shell=" + SHELL
+    const querystring = "ws://114.67.110.204:9997/resource/websocket?" + "podNs="+ podNamespace + "&podName=" + podName + "&containerName=" + containerName + "&shell=" + SHELL
     const ws = new WebSocket(querystring)
     onMounted(()=>{
       term.open(document.getElementById('terminal'));  //绑定dom节点
