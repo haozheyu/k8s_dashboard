@@ -1,6 +1,6 @@
 # Vite2.x + Vue3.x + Xtermjs4
 
-[在线体验地址](http://114.67.110.204:4500/login)
+[在线体验地址](http://114.67.110.204:4500)
 ## 相关信息
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
 - 构建工具：[Vite 2.x](https://cn.vitejs.dev/)

@@ -4,7 +4,7 @@
 
 <script>
 
-import {defineComponent, reactive, toRefs, onMounted, ref, markRaw, onBeforeUnmount, onUnmounted} from 'vue'
+import {defineComponent, onMounted, ref, onUnmounted} from 'vue'
 import { useRouter } from 'vue-router'
 import { Terminal } from 'xterm';
 import { FitAddon  } from 'xterm-addon-fit';
@@ -39,7 +39,7 @@ export default defineComponent({
     const podNamespace = router.currentRoute.value.query.podNamespace
     const containerName = router.currentRoute.value.query.containerName
     const SHELL = router.currentRoute.value.query.shell
-    const querystring = "ws://localhost:8080/resource/websocket?" + "podNs="+ podNamespace + "&podName=" + podName + "&containerName=" + containerName + "&shell=" + SHELL
+    const querystring = "ws://127.0.0.1:9997/resource/websocket?" + "podNs="+ podNamespace + "&podName=" + podName + "&containerName=" + containerName + "&shell=" + SHELL
     const ws = new WebSocket(querystring)
     onMounted(()=>{
       term.open(document.getElementById('terminal'));  //绑定dom节点

@@ -103,7 +103,7 @@ export default {
     const Podcontainers = reactive<Container[]>([])
     const PodVolumeMounts = reactive<VolumeMount[]>([])
 
-    const querUrl = "resource/pod?"+"namespace="+podNamespace+"&podName="+podName
+    const querUrl = "/resource/pod?"+"namespace="+podNamespace+"&podName="+podName
     axios.get(querUrl).then((res) => {
       // console.log(res.data[0])
       PodMetadata.name = res.data[0].metadata.name

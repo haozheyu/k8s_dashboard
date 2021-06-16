@@ -2,9 +2,12 @@ import { createRouter, createWebHashHistory, Router, RouteRecordRaw } from 'vue-
 import Home from '@/views/Home.vue'
 import Vuex from '@/views/Vuex.vue'
 import Resource from '@/views/Resource.vue'
+import Pod from '@/views/resource/Pod.vue'
 import Templeton from '@/views/Templeton.vue'
 import Stores from '@/views/Stores.vue'
 import Images from '@/views/Images.vue'
+import PodInfo from '@/views/resource/PodInfo.vue'
+import webShell from '@/views/Xterm.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -21,14 +24,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/pod',
     name: 'pod',
-    component: import('@/views/resource/Pod.vue'),
+    component: Pod,
     props: true,
     meta: { title: 'pod管理' }
   },
   {
     path: '/podInfo',
     name: 'podInfo',
-    component: import('@/views/resource/PodInfo.vue'),
+    component: PodInfo,
     props: true,
     meta: { title: 'pod详情页面' }
   },
@@ -42,7 +45,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/webShell',
     name: 'webShell',
-    component: () => import('@/views/Xterm.vue'),
+    component: webShell,
     props: true,
     meta: { title: 'deployments' }
   },
